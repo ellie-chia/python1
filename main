@@ -1,0 +1,41 @@
+# In the main function of the code the system performs actions based off the user input in the terminal.
+
+#inporting the student management system where functions are made.
+from student_management_system import*
+
+#defining and creating menu where user can look at the options in the program
+def menu():
+    print("Welcome to the student management system")
+    print("Please select from one of the following")
+
+    print("1. View student information.")
+    print("2. View unit information.")
+    print("3. View degree information.")
+
+    print("4. Register one new student.")
+    print("5. Register one new unit")
+    print("6. Register one new degree and associate 2 units with it")
+
+    print("7. Exit the program")
+
+#User navigates the home page by inputing a number. The program will respond by displaying the corresponding functions and information
+while True:
+    menu()
+    choice = int(input("Enter your choice (1-7): "))
+
+    if choice == 1:
+        student_basic_information(students_data)
+    elif choice == 2:
+        unit_information(units_data)
+    elif choice == 3:
+        degree_information(degrees_data)
+    elif choice == 4:
+        insert_student_information(students_data)
+    elif choice == 5:
+        insert_unit_information(units_data)
+    elif choice == 6:
+        insert_degree_information(degrees_data)
+    elif choice == 7:
+        break
+    else:
+        print("Invalid choice. Please enter a number between 1 & 7")
